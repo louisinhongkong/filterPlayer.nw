@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Text Editor</title>
+    <script src="lokijs.js"></script>
+    <script src="jquery-2.1.3.min.js"></script>
+
+
+
+		<script>
+
+
+	  db = new loki('loki.json'),
+
+
+		$.ajax({
+		  dataType: "text",
+		  url: 'http://localhost:8888/musicPlayer.nw/loki.json',
+		  data: '',
+		  success: function(data){
+		  	db.loadJSON(data,{});
+		  	db.saveDatabase();
+		  	db.loadDatabase({}, function () {
+		  	  var collection = db.getCollection('musicLibrary')
+		  	  console.log(collection.data);
+		  	});
+
+
+		  }
+		});
+
+
+		</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+</body>
+</html>

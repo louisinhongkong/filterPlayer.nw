@@ -1,0 +1,218 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+div#container{
+	border: 7px solid #666;
+	min-height: 900px;
+	background: #333;
+}
+
+/*************************************************/
+div#search{
+	background:#666;		
+	height: 24px;
+}
+div#search>div{
+
+	border:1px solid #999;
+	text-align: left;
+	color:#ccd;
+	font-family: monospace;
+	text-transform: uppercase;
+	text-indent: 10px;		
+	height: 15px;	
+	line-height: 15px;
+	background:#999;
+}
+
+/*************************************************/
+div#songList{
+
+}
+div#songList>ul{
+	height: 200px;
+	overflow-y: scroll;
+}
+
+div#songList>ul>li{
+	list-style: none;
+	border:1px solid #444;			
+	border-top: none;	
+	height: 15px;
+	line-height: 15px;
+	color: #999;
+}
+div#songList>ul>li:first-child{
+	border:1px solid #444;							
+}
+div#songList>ul>li.playing{
+	background: #444;
+}
+div#songList>ul>li>pre{
+	display: inline-block;
+	margin: 0px 0;				
+	width: 24%;
+	text-indent: 5px;
+	border-left: 1px solid #444;
+	font-family: monospace;
+	overflow: hidden;
+}
+div#songList>ul>li>pre:first-child{
+	border: none;
+}
+ul#filterResults,ul#searchResults{
+	display: none;
+}
+
+/*************************************************/
+
+
+div#currentlyPlaying{
+	text-align: center;
+	border: 1px solid #666;
+	background:#666;
+	color: #ccc;
+	font-style: italic;
+	height: 50px;
+	line-height: 50px;
+	position:relative;
+}
+div#songOnPlay{
+	z-index: 1;position: absolute; top:0px; left:0px;  width:100%; height:100%;
+}
+div#songProgressBar{
+	z-index: 0;position: absolute; top:0px; left:0px; background:#444; width:500px; height:100%;
+}
+
+/*************************************************/
+
+div#controls{
+	width: 100%;
+	background: #333;
+}
+div#controls>ul{
+	border:0px solid #999;
+	text-align: center;
+	padding: 20px;
+}
+div#controls>ul>li{		
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: courier;
+	margin: 0 15px;
+	color:#666;
+	padding: 5px;
+}
+div#controls>ul>li.selected{
+	background:#ccc;
+}
+div#controls>ul>li.setFilter{
+	color:crimson;				
+	background:#333;
+}
+div#controls>ul>li#filter.selected{
+	background: #ccc;
+}
+/*************************************************/
+
+div#explorability>ul{
+	display: inline-block;
+	width: 16.3%;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	margin-top: 10px;
+}
+div#explorability>ul>li{
+	display: inline-block;
+	font-family: monospace;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+
+
+/*************************************************/
+
+
+div#scales>ul{
+	display: inline-block;
+	width: 16.3%;
+	margin: 0px;
+	padding:0px;
+	margin-top:0px;
+	text-align: center;				
+	vertical-align: top;
+}
+div#scales>ul>li{
+	list-style:none;
+	margin: 0 1px;
+	height: 43px;
+	line-height: 43px;
+	font-family: monospace;
+	border: 1px solid #444;
+	border-bottom: none;
+	background-color: #222;
+	color:#999;
+}
+div#scales>ul>li.selected{
+	background:#111;
+}			
+div#scales>ul>li.setFilter{
+	background:#111;
+}			
+div#scales>ul>li.filter{
+	color: crimson;				
+}
+div#scales>ul>li:last-child{
+	border: 1px solid #444;		
+}	
+
+div#scales>ul:first-child{
+}			
+div#scales>ul>h4{
+	font-family: monospace;
+	text-transform: capitalize;
+	margin-bottom: 15px;
+	font-style: italic;
+	color: #888;				
+}
+
+/*************************************************/
+
+div#footer{
+	margin: 10px;
+	text-align: center;
+	font-family: monospace;
+	font-size: 8px;
+}
+
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #999;
+    -webkit-border-radius: 8px;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #ccc;
+}
+
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

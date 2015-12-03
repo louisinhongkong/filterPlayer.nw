@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Player</title>
+    <script src="lokijs.js"></script>
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="jquery-plugins.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+	<script>
+
+
+
+	var db = new Database;
+	db.setDatabaseFile('loki.json').setCollection('musicLibrary');
+
+	var songList = new SongList;
+	var templates = new Templates;
+	var uif = new UIFunction;
+	var player = new Player;
+	var scales = new Scales;
+	var filter = new Filter;
+
+	scales.load('scales.json');
+
+
+	$(document).ready(function(){
+		uif.playerControls();
+		uif.search();
+		db.load();
+
+	});
+
+
+
+
+	navigator.getUserMedia = navigator.webkitGetUserMedia;
+
+	window.AudioContext = window.AudioContext ||
+	                      window.webkitAudioContext;
+
+	var context = new AudioContext();
+	var microphone;
+    var stream;
+
+
+	//var myArrayBuffer = audioCtx.createBuffer(2, 4, audioCtx.sampleRate);
+
+	function suc(stream){
+		 microphone = context.createMediaStreamSource(stream);
+		 console.log( window.URL.createObjectURL(stream));
+		
+	}
+
+	function err(){
+		console.log('eerr');
+	}
+
+
+	$(document).ready(function(){
+
+		$('#rec').on('click',function(){
+			console.log(1);
+			navigator.getUserMedia({audio: true}, suc, err);
+		});
+
+		$('#stop').on('click',function(){
+			stream.stop();
+				
+			microphone.disconnect();
+		});
+
+		$('#play').on('click',function(){
+			microphone.connect(context.destination);
+			microphone.start();
+		});
+	});
+
+
+	</script>
+</head>
+<body>
+
+
+<div id="container">
+	<div style="margin:5px">
+		<div id="rec">rec</div>
+		<div id="stop">stop</div>
+		<div id="play">play</div>		
+	</div>
+
+	<div id="search">
+		<div id="searchBox" contenteditable>search</div>
+	</div>
+	
+	<div id="songList" class="noselect">
+		<ul id="allSongs"></ul>
+		<ul id="filterResults"></ul>
+		<ul id="searchResults"></ul>		
+	</div>
+
+	<div id="currentlyPlaying">
+		<div id="songOnPlay">Track</div>
+		<div id="songProgressBar"></div>
+	</div>
+
+	<div id="controls">
+		<ul>
+			<li id="shuffle">shuffle</li>
+			<li id="repeat">repeat</li>
+			<li id="prev">prev</li>
+			<li id="pause">pause</li>
+			<li id="next">next</li>
+			<li id="filter">filter</li>
+			<li id="record">record</li>
+		</ul>
+	</div>
+
+	<div id="scales">		
+	</div>
+
+	<div id="recordPanel">
+	</div>
+
+
+	<div id="footer">To earth and beyond!</div>
+</div>
+
+</body>
+</html>

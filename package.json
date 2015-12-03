@@ -1,0 +1,13 @@
+{
+  "name": "hellooooo",
+  "main": "index.html",
+  "window": {
+    "toolbar": true,
+    "width": 1200,
+    "height": 967,
+    "position": "center",
+    "min_width": 400,
+    "min_height": 200,    
+    "title" :"bdsfsfob"
+  }
+}

@@ -1,0 +1,124 @@
+{
+ "positivity":
+  {
+   "10":"Ecstatic",
+   "9":"In Love",
+   "8":"Cheerful",
+   "7":"Optimistic",
+   "6":"Determined",
+   "5":"Bitter Sweet",
+   "4":"Heartacher",
+   "3":"Goodbyes",
+   "2":"Tear Jerker",
+   "1":"Mournful"   
+  },
+  "pace":
+  {
+  	"10":"Gone Crazy",
+  	"9":"Raving",
+  	"8":"Running",
+  	"7":"Jogging",
+  	"6":"Walking",
+  	"5":"Driving",
+  	"4":"Sitting",
+  	"3":"Laid Back",
+  	"2":"Drift Wood",
+  	"1":"Sleep"
+  },
+  "Rage":
+  {
+  	"10":"Rage",
+  	"9":"9",
+  	"8":"8",
+  	"7":"7",
+  	"6":"6",
+  	"5":"5",
+  	"4":"4",
+  	"3":"3",
+  	"2":"2",
+  	"1":"Tranquil"
+  },
+  "Tonal":
+  {
+  	"10":"Dark",
+  	"9":"9",
+  	"8":"8",
+  	"7":"7",
+  	"6":"6",
+  	"5":"5",
+  	"4":"4",
+  	"3":"3",
+  	"2":"2",
+  	"1":"Light"
+  },
+  "Backdrop":
+  {
+    "13":"Da Streets",
+    "12":"Oldies",
+    "11":"Disco",
+    "10":"World Stage",
+  	"9":"Grand Theatre",
+  	"8":"Woodstock",
+  	"7":"Creamfields",	
+  	"6":"Rock City",
+  	"5":"Indie Stage",
+  	"4":"Pop Concert",					
+  	"3":"Swing Club",
+  	"2":"Basement Party",
+  	"1":"Smokey Lounge"		
+  },
+  "Repeatability":
+  {
+  	"10":"Often",
+  	"9":"9",
+  	"8":"8",
+  	"7":"7",
+  	"6":"6",
+  	"5":"5",
+  	"4":"4",
+  	"3":"3",
+  	"2":"2",
+  	"1":"Rarely"
+  },
+  "Rating":
+  {
+    "10":"10",
+    "9":"9",
+    "8":"8",
+    "7":"7",
+    "6":"6",
+    "5":"5",
+    "4":"4",
+    "3":"3",
+    "2":"2",
+    "1":"1"
+  },  
+  "Tags":
+  {
+    "1":"Is Epic",
+    "2":"For Review",
+    "3":"Podcast",
+    "4":"E-Book",
+    "5":"Coding",
+    "6":"Gym",
+    "7":"Instrumental",
+    "8":"Xmas",
+    "9":"Long Set",
+    "10":"Delete It",
+    "11":"Long Crescendo"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
